@@ -27,9 +27,16 @@ public class Equipamento {
 	}
 	public void setData(LocalDateTime data) {
 		this.data = data;
-	}	
+	}
+	public String dataFormatada() {
+		if (this.data == null) {
+			return null;
+		} else {
+			return this.data.format(Util.getDateTimeFormate());
+		}
+	}
 	public String toString() {
-		return "| " + this.nome + " | " + this.data.format(Util.getDateTimeFormate()) + " |";
+		return "| " + this.nome + " | " + dataFormatada() + " |";
 	}
 	
 }

@@ -37,6 +37,7 @@ public class Main {
 		LocalDateTime data2 = LocalDateTime.parse("10/08/2020 10:30", Util.getDateTimeFormate());
 		LocalDateTime data3 = LocalDateTime.parse("10/08/2020 11:00", Util.getDateTimeFormate());
 		LocalDateTime data4 = LocalDateTime.parse("10/08/2020 11:30", Util.getDateTimeFormate());
+		LocalDateTime data5 = LocalDateTime.parse("10/08/2020 12:00", Util.getDateTimeFormate());
 		
 		
 		Equipamento ep1 = new Equipamento("EP01", data1);
@@ -48,6 +49,9 @@ public class Main {
 		Equipamento ep7 = new Equipamento("EP01", data3);
 		Equipamento ep8 = new Equipamento("EP01", data2);
 		Equipamento ep9 = new Equipamento("EP02", data4);
+		Equipamento ep10 = new Equipamento("EP01", null);
+		Equipamento ep11 = new Equipamento("EP03", null);
+		Equipamento ep12 = new Equipamento("EP02", data5);
 		
 		resultado.add(ep1);
 		resultado.add(ep2);
@@ -58,6 +62,9 @@ public class Main {
 		resultado.add(ep7);
 		resultado.add(ep8);
 		resultado.add(ep9);
+		resultado.add(ep10);
+		resultado.add(ep11);
+		resultado.add(ep12);
 		
 		return resultado;
 	}

@@ -7,8 +7,12 @@ import teste.ordenacao.model.Equipamento;
 public class DataEquipamentoComparator implements Comparator<Equipamento> {
 
 	@Override
-	public int compare(Equipamento data1, Equipamento data2) {
-		return data1.getData().compareTo(data2.getData());
+	public int compare(Equipamento equipamento1, Equipamento equipamento2) {
+		if (equipamento1.getData() == null || equipamento2.getData() == null) {
+			return 1;
+		} else {
+			return equipamento1.getData().compareTo(equipamento2.getData());
+		}
 	}
 
 }
